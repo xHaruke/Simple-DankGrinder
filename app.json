@@ -12,10 +12,6 @@
       "dankmemer"
     ],
     "env": {
-      "token": {
-        "description": "Grinder Account Token e.g. OTQ1OTI5MjExNDIyNjAxMjE2.YhXTcQ.f8W2BsaUHjsahdQWfq-OKASDHKhWQ; Youtube Video : https://youtu.be/YEgFvgg7ZPI",
-        "required": "true"
-      },
       "channelID": {
         "description": "Channel ID of channel in which you want the selfbot to send messages. Youtube Video : https://youtu.be/NLWtSHWKbAI",
         "required": "true"
@@ -28,12 +24,16 @@
         "description": "Your timezone. You can get it here : https://webbrowsertools.com/timezone/ ; e.g. Asia/Calcutta",
         "required": "true"
       },
+      "endTime": {
+        "description": "Time when you want the bot to stop working e.g. 19; Use 24 hr format and put only the hour value !! ( Recommended difference between start and end time is 12 hrs )",
+        "required": "true"
+      },
       "startTime": {
         "description": "Time when you want the bot to start running e.g. 7; Use 24 hr format and put only the hour value !! ( Recommended difference between start and end time is 12 hrs )",
         "required": "true"
       },
-      "endTime": {
-        "description": "Time when you want the bot to stop working e.g. 19; Use 24 hr format and put only the hour value !! ( Recommended difference between start and end time is 12 hrs )",
+      "token": {
+        "description": "Grinder Account Token e.g. OTQ1OTI5MjExNDIyNjAxMjE2.YhXTcQ.f8W2BsaUHjsahdQWfq-OKASDHKhWQ; Youtube Video : https://youtu.be/YEgFvgg7ZPI",
         "required": "true"
       }
     }
