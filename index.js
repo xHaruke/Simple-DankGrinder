@@ -81,14 +81,14 @@ client.on("message", (message) => {
       message.channel.send("pls hunt")
         console.log(">".green + " sent"+" pls hunt".red)
         message.channel.stopTyping();
-    }*/
+    }
     if (message.content.toLowerCase().includes("daily")){
       message.channel.startTyping()
       message.channel.send("pls daily")
       console.log(">".green + " sent"+" pls daily".red)
       message.channel.stopTyping();
   }
-    /*if (message.content.toLowerCase().includes("beg")){
+     if (message.content.toLowerCase().includes("beg")){
       message.channel.startTyping()
       message.channel.send("pls beg")
         console.log(">".green + " sent"+" pls beg".red)
