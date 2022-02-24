@@ -75,7 +75,7 @@ How to set on repl?
 ![monitor](https://i.imgur.com/KPXu2GJ.png)
 
 - Select the monitor type to HTTP(s) > Type a name for your bot > put the copied url in there > create monitor
-![uptime](https://i.imgur.com/JdUghEu.png)
+![uptime](https://i.imgur.com/1cYXNjR.png)
 
 ### You are now done !! ###
 
