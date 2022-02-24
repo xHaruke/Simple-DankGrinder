@@ -171,7 +171,7 @@ setTimeout(function(){
     }
  }, 45000);
 
- schedule.scheduleJob('0 8 * * *', () => { 
+ schedule.scheduleJob('5 0 * * *', () => { 
   const channelss = client.channels.cache.get(channelid)
      channelss.startTyping()
      channelss.send("pls daily")
