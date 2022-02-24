@@ -19,7 +19,7 @@ How to deploy?
    - To get Token : https://youtu.be/YEgFvgg7ZPI
 
    - In the timzone field put your timezone ! To get timezone : https://webbrowsertools.com/timezone ; e.g. Asia/Calcutta
-   - a
+
    - **In the storageAccount** field put the userid of the account on which you want to transfer your dank coins ! Put selfbot's id if you dont want to transfer !
 
 
