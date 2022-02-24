@@ -169,7 +169,7 @@ setTimeout(function(){
     console.log('>'.green + " Resting...".red)
   console.log(global.datetime.tz(process.env.timezone).format('DD/MM # hh:mm A').green)
     }
- }, 45000);
+ }, 46000);
 
  schedule.scheduleJob('5 0 * * *', () => { 
   const channelss = client.channels.cache.get(channelid)
