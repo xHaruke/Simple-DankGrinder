@@ -71,7 +71,7 @@ How to set on repl?
 - Click run and copy this url          
 ![express](https://i.imgur.com/AoI9Pca.png)
 
-- Now go to https://uptimerobot.com/dashboard and click add a new monitor   
+- Now go to https://uptimerobot.com/dashboard and click on add a new monitor   
 ![monitor](https://i.imgur.com/KPXu2GJ.png)
 
 - Select the monitor type to HTTP(s) > Type a name for your bot > put the copied url in there > create monitor
