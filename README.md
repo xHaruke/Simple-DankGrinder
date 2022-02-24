@@ -29,8 +29,8 @@ How to deploy?
 - Turn off web ( npm start ) and turn one worker ( node index.js )
 ![Web dyno](https://i.imgur.com/PQSuy44.png)
 
-- Now go to more > view logs to check if it is working fine
+- Now go to more > view logs to check if it is working fine                                         
 ![logs](https://i.imgur.com/ycbUPsJ.png)
 
-- It should look something like this
+- It should look something like this                                                                     
 ![done](https://i.imgur.com/sGVK6nZ.png)
