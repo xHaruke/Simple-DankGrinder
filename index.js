@@ -188,7 +188,7 @@ setTimeout(function(){
     setTimeout(function(){
       channelss.send("pls give <@" +storageac+ "> 99999")
       client.users.fetch(storageac).then((user) => {
-      console.log(">".green + ` transferred` + ` 99,999 DC`.red + ` to` + `${user.tag}`.underline.red)
+      console.log(">".green + ` transferred` + ` 99,999 DC`.red + ` to ` + `${user.tag}`.underline.red)
       })
     }, 3000)
     channelss.stopTyping();
