@@ -198,6 +198,64 @@ setTimeout(function(){
     }
  }, 200000);*/
 
+ schedule.scheduleJob('0 */3 * * *', () => { 
+    if (global.now >= beginTime && global.now <= ceaseTime) {
+ const channelss = client.channels.cache.get(channelid)
+      const array = [
+        "aplus",
+        "ant",
+        "bean",
+        "cookie",
+        "corncob",
+        "corndog",
+        "potato",
+        "skunk",
+        "rabbit",
+        "duck",
+        "deer",
+        "boar",
+        "dragon",
+        "seaweed",
+        "fish",
+        "rarefish",
+        "exoticfish",
+        "jellyfish",
+        "legendaryfish",
+        "kraken",
+        "junk",
+        "garbage",
+        "trash",
+        "bread",
+        "worm",
+        "ladybug",
+        "stickbug",
+        "spider",
+        "banhammer",
+        "musicalnote",
+        "energydrink",
+        "memepills",
+        "lawdegree",
+        "vaccine",
+        "beakerofsusfluid",
+        "ectoplasm"
+      ];
+let index = 0; 
+
+function showNext() {
+    channelss.send(`pls sell ${array[index++]} all`);
+    if (index < array.length) {
+        setTimeout(showNext, 6000);
+    }
+}
+showNext();
+      
+    channelss.stopTyping();
+  }else{
+    console.log('>'.green + " Resting...".red)
+    console.log(global.datetime.tz(process.env.timezone).format('DD/MM # hh:mm A').green)
+    }
+ })
+
 }, 10000)
 
 
