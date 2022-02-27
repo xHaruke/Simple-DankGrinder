@@ -186,7 +186,7 @@ setTimeout(function(){
       channelss.send('pls with 99999')
       console.log(">".green + " sent"+" pls with 99999".red)
     setTimeout(function(){
-      channelss.send("pls trade <@" +storageac+ "> 99999")
+      channelss.send("pls trade 99999 <@" +storageac+ ">")
       client.users.fetch(storageac).then((user) => {
       console.log(">".green + ` transferred 99,999 DC to ${user.tag}`.red)
       })
