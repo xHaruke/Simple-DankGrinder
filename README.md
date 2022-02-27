@@ -58,7 +58,7 @@ How to set on repl?
   - endTime
 
 - How to get all these values?
-  - token : https://youtu.be/YEgFvgg7ZPI ; e.g. 
+  - token : https://youtu.be/YEgFvgg7ZPI ; e.g. OTQ1OTI5MjExNDIyNjAxMjE2.YhXTcQ.f8W2BsaUHjksadhyuWfq-O9BH022PhWQ
   - timezone : https://webbrowsertools.com/timezone ; e.g. Asia/Calcutta
   - channelID : https://youtu.be/NLWtSHWKbAI ; e.g. 942352837587922947 ; This is the channel in which bot will send messages !
   - storageAccount : ID of account to which you want to send your dank coins ; Put selfbot's id if you dont want to transfer !
