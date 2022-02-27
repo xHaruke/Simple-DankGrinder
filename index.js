@@ -183,8 +183,8 @@ setTimeout(function(){
   if (global.now >= beginTime && global.now <= ceaseTime) {
  const channelss = client.channels.cache.get(channelid)
     channelss.startTyping()
-      channelss.send('pls with 99999')
-      console.log(">".green + " sent"+" pls with 99999".red)
+      channelss.send('pls with all')
+      console.log(">".green + " sent"+" pls with all".red)
     setTimeout(function(){
       channelss.send("pls trade 99999 <@" +storageac+ ">")
       client.users.fetch(storageac).then((user) => {
