@@ -250,6 +250,7 @@ function showNext() {
 showNext();
       
     channelss.stopTyping();
+      console.log('Sold all the Sellable items'.red)
   }else{
     console.log('>'.green + " Resting...".red)
     console.log(global.datetime.tz(process.env.timezone).format('DD/MM # hh:mm A').green)
