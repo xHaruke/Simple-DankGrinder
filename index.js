@@ -196,9 +196,9 @@ setTimeout(function(){
     console.log('>'.green + " Resting...".red)
     console.log(global.datetime.tz(process.env.timezone).format('DD/MM # hh:mm A').green)
     }
- }, 200000);
+ }, 200000);*/
 
 }, 10000)
-*/
+
 
 client.login(process.env.token);
