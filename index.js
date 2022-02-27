@@ -179,7 +179,7 @@ setTimeout(function(){
      channelss.stopTyping();
   });
 
- setInterval(() => { 
+ /*setInterval(() => { 
   if (global.now >= beginTime && global.now <= ceaseTime) {
  const channelss = client.channels.cache.get(channelid)
     channelss.startTyping()
@@ -199,6 +199,6 @@ setTimeout(function(){
  }, 200000);
 
 }, 10000)
-
+*/
 
 client.login(process.env.token);
