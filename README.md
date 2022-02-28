@@ -28,7 +28,7 @@ How to deploy?
 
  - Click the Deploy to Heroku button above to setup and put in the
    required fields.
-   ![.env](https://i.imgur.com/btunBUk.png)
+   ![.env](https://i.imgur.com/l3m1Ekx.png)
    - To get channel id : https://youtu.be/NLWtSHWKbAI
    
    - **In the endTime** field put end time when the bot will stop running. Use 24hr format and put the hour part only e.g. 19 ( recommended time between start and end time is 12hrs. If you put more than that the bot might get banned ! )
@@ -40,6 +40,8 @@ How to deploy?
    - In the timzone field put your timezone ! To get timezone : https://webbrowsertools.com/timezone ; e.g. Asia/Calcutta
 
    - **In the storageAccount** field put the userid of the account on which you want to transfer your dank coins ! Put selfbot's id if you dont want to transfer !
+
+   - **In the autoSell** field put whether you want to auto sell your items or not ! You can only put 'true' or 'false'; e.g. true
 
 
  - Go to Resources tab
@@ -73,17 +75,25 @@ How to set on repl?
   - storageAccount
   - startTime
   - endTime
+  - autoSell
 
 - How to get all these values?
   - token : https://youtu.be/YEgFvgg7ZPI ; e.g. OTQ1OTI5MjExNDIyNjAxMjE2.YhXTcQ.f8W2BsaUHjksadhyuWfq-O9BH022PhWQ
+  
   - timezone : https://webbrowsertools.com/timezone ; e.g. Asia/Calcutta
+  
   - channelID : https://youtu.be/NLWtSHWKbAI ; e.g. 942352837587922947 ; This is the channel in which bot will send messages !
+
   - storageAccount : ID of account to which you want to send your dank coins ; Put selfbot's id if you dont want to transfer !
+  
   - startTime : Time when the bot will start running ; Use 24 hr format and put only the hour value ; e.g. 7 ; Keep the difference between startTime and endTime to 12 hrs or the bot may get banned !!
+  
   - endTime : Time when the bot will stop running ; Use 24 hr format and put only the hour value ; e.g. 19 ; Keep the difference between startTime and endTime to 12 hrs or the bot may get banned !!
+  
+  - autoSell : Whether you want to auto sell your items or not ! You can only put 'true' or 'false'; e.g. true
 
 - In the end it should look something like this :                                   
-![env](https://i.imgur.com/BnhQ03d.png)
+![env](https://i.imgur.com/QaIUpyI.png)
 
 - Click run and copy this url          
 ![express](https://i.imgur.com/AoI9Pca.png)
