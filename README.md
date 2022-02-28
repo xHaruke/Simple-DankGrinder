@@ -1,6 +1,23 @@
 # Simple DankGrinder
 It is a simple Dank Memer Grinder bot which can **bypass Account Bans** but self bots are against discord's ToS. So, Use it at your own risk.
 
+## Features
+
+- Customizable Runtime
+- Bypass Banning
+- Easy Setup
+- ~~Auto-Transfer Dank Coins~~
+- Auto Daily
+- 24/7
+- Auto Sell
+- Auto Deposit Money
+
+### Supported Grind Command :
+- Pls dig
+- Pls hunt
+- Pls beg
+- Pls fish
+
 # Setup 
 
 ## Heroku ##
@@ -37,7 +54,7 @@ How to deploy?
 - It should look something like this                                                                     
 ![done](https://i.imgur.com/sGVK6nZ.png)
 
-## Setup on Repl.it ##
+## Repl.it
 
 [![Run on Repl.it](https://repl.it/badge/github/SudhanPlayz/Discord-MusicBot)](https://repl.it/github/Haruke-Sensei/Simple-DankGrinder)
 
@@ -77,6 +94,6 @@ How to set on repl?
 - Select the monitor type to HTTP(s) > Type a name for your bot > put the copied url in there > create monitor
 ![uptime](https://i.imgur.com/1cYXNjR.png)
 
-### You are now done !! ###
+### You are now done !! 
 
 # Don't forget to ⭐ if you liked it !
