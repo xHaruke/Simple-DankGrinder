@@ -217,7 +217,8 @@ setTimeout(function(){
     console.log(global.datetime.tz(process.env.timezone).format('DD/MM # hh:mm A').green)
     }
  }, 200000);*/
-
+if (process.env.autoSell === 'true'){
+console.log('AutoSell Running !'.magenta)
  schedule.scheduleJob('0 */3 * * *', () => { 
     if (global.now >= beginTime && global.now <= ceaseTime) {
  const channelss = client.channels.cache.get(channelid)
@@ -276,6 +277,7 @@ showNext();
     console.log(global.datetime.tz(process.env.timezone).format('DD/MM # hh:mm A').green)
     }
  })
+}
 
 }, 10000)
 

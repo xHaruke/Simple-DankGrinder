@@ -35,6 +35,10 @@
       "token": {
         "description": "Grinder Account Token e.g. OTQ1OTI5MjExNDIyNjAxMjE2.YhXTcQ.f8W2BsaUHjsahdQWfq-OKASDHKhWQ; Youtube Video : https://youtu.be/YEgFvgg7ZPI",
         "required": "true"
+      },
+      "autoSell":{
+        "description": "Whether you want to autoSell or not ! You can only put 'true' or 'false'; e.g. true",
+        "required": "true"
       }
     }
   }
