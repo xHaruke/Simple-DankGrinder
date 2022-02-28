@@ -37,7 +37,7 @@
         "required": "true"
       },
       "autoSell":{
-        "description": "Whether you want to autoSell or not ! You can only put 'true' or 'false'; e.g. true",
+        "description": "Whether you want to auto sell your items or not ! You can only put 'true' or 'false'; e.g. true",
         "required": "true"
       }
     }
