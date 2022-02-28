@@ -9,6 +9,7 @@ app.listen(3000)
 
 const schedule = require('node-schedule')
 var colors = require('colors');
+var convertTime = require('convert-time');
 const Discord = require("discord.js-self");
 const client = new Discord.Client();
 var moment = require('moment-timezone');
@@ -24,6 +25,25 @@ var beginTime = begin.tz('Europe/London').format('H');
 
 var end = moment.tz(process.env.endTime, "H", process.env.timezone);
 var ceaseTime = end.tz('Europe/London').format('H');
+
+if (parseInt(process.env.endTime) > 24){
+  console.log('You cannot put a value above 24 in endTime !'.red)
+  return;
+}
+
+if (parseInt(process.env.startTime) > 24){
+  console.log('You cannot put a value above 24 in startTime !'.red)
+  return;
+}
+
+if (parseInt(process.env.startTime) >= parseInt(process.env.endTime)) {
+  console.log (`Invald Format !!!\nEnd Time should be greater than start time !!`.red.underline.bold)
+  return;
+}
+
+console.log('Start Time : '.red+ convertTime(`${process.env.startTime}:00`, 'hh:XX A'.blue))
+console.log('End Time : '.red+ convertTime(`${process.env.endTime}:00`, 'hh:XX A'.blue))
+console.log('Runtime : '.red,`${process.env.endTime - process.env.startTime} hrs`.blue)
 
 client.on("message", (message) => {
   if(message.author.id === client.user.id) return;
