@@ -11,6 +11,7 @@ It is a simple Dank Memer Grinder bot which can **bypass Account Bans** but self
 - 24/7
 - Auto Sell
 - Auto Deposit Money
+- Auto Buy Tools
 
 ### Supported Grind Command :
 - Pls dig
@@ -42,6 +43,8 @@ How to deploy?
    - **In the storageAccount** field put the userid of the account on which you want to transfer your dank coins ! Put selfbot's id if you dont want to transfer !
 
    - **In the autoSell** field put whether you want to auto sell your items or not ! You can only put 'true' or 'false'; e.g. true
+
+   - **In the autoBuy** field put whether you want to auto buy tools or not ! You can put put 'true' or 'false'; e.g. true
 
 
  - Go to Resources tab
@@ -76,6 +79,7 @@ How to set on repl?
   - startTime
   - endTime
   - autoSell
+  - buyItemsIfPossible
 
 - How to get all these values?
   - token : https://youtu.be/YEgFvgg7ZPI ; e.g. OTQ1OTI5MjExNDIyNjAxMjE2.YhXTcQ.f8W2BsaUHjksadhyuWfq-O9BH022PhWQ
@@ -92,8 +96,10 @@ How to set on repl?
   
   - autoSell : Whether you want to auto sell your items or not ! You can only put 'true' or 'false'; e.g. true
 
+  - buyItemsIfPossible : Whether you want to auto buy tools or not ! You can put put 'true' or 'false'; e.g. true
+
 - In the end it should look something like this :                                   
-![env](https://i.imgur.com/QaIUpyI.png)
+![env](https://i.imgur.com/QaIUpyI.png) 
 
 - Click run and copy this url          
 ![express](https://i.imgur.com/AoI9Pca.png)

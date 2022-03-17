@@ -1,44 +1,48 @@
 {
-    "name": "Simple-DankGrinder",
-    "description": "A really simple Dank Grinder self bot which can bypass account bans",
-    "repository": "https://github.com/Haruke-Sensei/Simple-DankGrinder",
-    "logo": "https://user-images.githubusercontent.com/49152866/69035248-3ba6ec00-0a09-11ea-9526-641dfebb0e45.png",
-    "keywords": [
-      "node",
-      "discord",
-      "dank",
-      "dankmemergrinder",
-      "selfbot",
-      "dankmemer"
-    ],
-    "env": {
-      "channelID": {
-        "description": "Channel ID of channel in which you want the selfbot to send messages. Youtube Video : https://youtu.be/NLWtSHWKbAI",
-        "required": "true"
-      },
-      "storageAccount": {
-        "description": "The account on which you want to tranfer your dank coins. Put selfbot's id if you dont want to transfer !",
-        "required": "true"
-      },
-      "timezone": {
-        "description": "Your timezone. You can get it here : https://webbrowsertools.com/timezone/ ; e.g. Asia/Calcutta",
-        "required": "true"
-      },
-      "endTime": {
-        "description": "Time when you want the bot to stop working e.g. 19; Use 24 hr format and put only the hour value !! ( Recommended difference between start and end time is 12 hrs )",
-        "required": "true"
-      },
-      "startTime": {
-        "description": "Time when you want the bot to start running e.g. 7; Use 24 hr format and put only the hour value !! ( Recommended difference between start and end time is 12 hrs )",
-        "required": "true"
-      },
-      "token": {
-        "description": "Grinder Account Token e.g. OTQ1OTI5MjExNDIyNjAxMjE2.YhXTcQ.f8W2BsaUHjsahdQWfq-OKASDHKhWQ; Youtube Video : https://youtu.be/YEgFvgg7ZPI",
-        "required": "true"
-      },
-      "autoSell":{
-        "description": "Whether you want to auto sell your items or not ! You can only put 'true' or 'false'; e.g. true",
+  "name": "Simple-DankGrinder",
+  "description": "A really simple Dank Grinder self bot which can bypass account bans",
+  "repository": "https://github.com/Haruke-Sensei/Simple-DankGrinder",
+  "logo": "https://user-images.githubusercontent.com/49152866/69035248-3ba6ec00-0a09-11ea-9526-641dfebb0e45.png",
+  "keywords": [
+    "node",
+    "discord",
+    "dank",
+    "dankmemergrinder",
+    "selfbot",
+    "dankmemer"
+  ],
+  "env": {
+    "channelID": {
+      "description": "Channel ID of channel in which you want the selfbot to send messages. Youtube Video : https://youtu.be/NLWtSHWKbAI",
+      "required": "true"
+    },
+    "storageAccount": {
+      "description": "The account on which you want to tranfer your dank coins. Put selfbot's id if you dont want to transfer !",
+      "required": "true"
+    },
+    "timezone": {
+      "description": "Your timezone. You can get it here : https://webbrowsertools.com/timezone/ ; e.g. Asia/Calcutta",
+      "required": "true"
+    },
+    "endTime": {
+      "description": "Time when you want the bot to stop working e.g. 19; Use 24 hr format and put only the hour value !! ( Recommended difference between start and end time is 12 hrs )",
+      "required": "true"
+    },
+    "startTime": {
+      "description": "Time when you want the bot to start running e.g. 7; Use 24 hr format and put only the hour value !! ( Recommended difference between start and end time is 12 hrs )",
+      "required": "true"
+    },
+    "token": {
+      "description": "Grinder Account Token e.g. OTQ1OTI5MjExNDIyNjAxMjE2.YhXTcQ.f8W2BsaUHjsahdQWfq-OKASDHKhWQ; Youtube Video : https://youtu.be/YEgFvgg7ZPI",
+      "required": "true"
+    },
+    "autoSell":{
+      "description": "Whether you want to auto sell your items or not ! You can only put 'true' or 'false'; e.g. true",
+      "required": "true"
+    },
+      "autoBuy":{
+        "description": "Whether you want to auto buy tools or not ! You can put put 'true' or 'false'; e.g. true",
         "required": "true"
       }
-    }
   }
+}

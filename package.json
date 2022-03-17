@@ -1,5 +1,5 @@
 {
-  "name": "dank-grinder-kyoto",
+  "name": "Simple-DankGrinder",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,6 +13,7 @@
     "colors": "^1.4.0",
     "convert-time": "^0.3.0",
     "discord.js-self": "^12.0.4",
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "moment-timezone": "^0.5.34",
     "node-schedule": "^2.1.0"
