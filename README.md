@@ -99,7 +99,7 @@ How to set on repl?
   - `autoBuy` : Whether you want to auto buy tools or not ! You can put put 'true' or 'false'; e.g. true
 
 - In the end it should look something like this :                                   
-![env](https://i.imgur.com/pzeJXt9.png) 
+![env](https://i.imgur.com/iHe0EXC.png) 
 
 - Click run and copy this url          
 ![express](https://i.imgur.com/AoI9Pca.png)
