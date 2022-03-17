@@ -10,12 +10,13 @@ app.listen(3000)
 const schedule = require('node-schedule')
 var colors = require('colors');
 var convertTime = require('convert-time');
+require('dotenv').config()
 const Discord = require("discord.js-self");
 const client = new Discord.Client();
 var moment = require('moment-timezone');
 
 client.on("ready", () => {
-  console.log(`Logged in as ` + client.user.tag.underline.brightRed);
+  console.log(`\nLogged in as ` + client.user.tag.underline.brightRed);
   client.user.setStatus('invisible')
 });
 
