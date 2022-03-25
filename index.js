@@ -30,20 +30,21 @@ var beginTime = begin.tz('Europe/London').format('H');
 var end = moment.tz(process.env.endTime, "H", timeZone);
 var ceaseTime = end.tz('Europe/London').format('H');
 
-global.dankChannel = client.channels.cache.get(channelid);
-
 if (parseInt(process.env.endTime) > 24) {
   console.log('You cannot put a value above 24 in endTime !'.red)
+  // @ts-ignore
   return;
 }
 
 if (parseInt(process.env.startTime) > 24) {
   console.log('You cannot put a value above 24 in startTime !'.red)
+  // @ts-ignore
   return;
 }
 
 if (parseInt(process.env.startTime) >= parseInt(process.env.endTime)) {
   console.log(`Invald Format !!!\nEnd Time should be greater than start time !!`.red.underline.bold)
+  // @ts-ignore
   return;
 }
 
@@ -62,33 +63,36 @@ if (process.env.autoBuy === 'true') {
     if (message.author.id !== "270904126974590976" && message.channel.id !== channelid) return;
 
     if (message.content.indexOf("You don't have a shovel") > -1) {
-      global.dankChannel.startTyping()
-      global.dankChannel.send("pls with 25000")
+      const dankChannel = client.channels.cache.get(channelid);
+      dankChannel.startTyping()
+      dankChannel.send("pls with 25000")
       setTimeout(function () {
-        global.dankChannel.send("pls buy shovel")
+        dankChannel.send("pls buy shovel")
       }, 3000)
       console.log('>'.green + ' bought' + ' a shovel !'.yellow)
-      global.dankChannel.stopTyping()
+      dankChannel.stopTyping()
     }
 
     if (message.content.indexOf("You don't have a hunting rifle") > -1) {
-      global.dankChannel.startTyping()
-      global.dankChannel.send("pls with 25000")
+      const dankChannel = client.channels.cache.get(channelid);
+      dankChannel.startTyping()
+      dankChannel.send("pls with 25000")
       setTimeout(function () {
-        global.dankChannel.send("pls buy rifle")
+        dankChannel.send("pls buy rifle")
       }, 3000)
       console.log('>'.green + ' bought' + ' a hunting rifle !'.yellow)
-      global.dankChannel.stopTyping()
+      dankChannel.stopTyping()
     }
 
     if (message.content.indexOf("You don't have a fishing pole") > -1) {
-      global.dankChannel.startTyping()
-      global.dankChannel.send("pls with 25000")
+      const dankChannel = client.channels.cache.get(channelid);
+      dankChannel.startTyping()
+      dankChannel.send("pls with 25000")
       setTimeout(function () {
-        global.dankChannel.send("pls buy pole")
+        dankChannel.send("pls buy pole")
       }, 3000)
       console.log('>'.green + ' bought' + ' a fishing rod !'.yellow)
-      global.dankChannel.stopTyping()
+      dankChannel.stopTyping()
     }
   })
 }
@@ -109,9 +113,10 @@ setTimeout(function () {
 */     
   setInterval(() => {
     if (global.now >= beginTime && global.now <= ceaseTime) {
-      global.dankChannel.startTyping()
-      global.dankChannel.send('pls dep all')
-      global.dankChannel.stopTyping();
+      const dankChannel = client.channels.cache.get(channelid);
+      dankChannel.startTyping()
+      dankChannel.send('pls dep all')
+      dankChannel.stopTyping();
       console.log(">".green + " sent" + " pls dep all".red)
     } else {
       console.log('>'.green + " Resting...".red)
@@ -123,10 +128,11 @@ setTimeout(function () {
 */ 
   setInterval(() => {
     if (global.now >= beginTime && global.now <= ceaseTime) {
-      global.dankChannel.startTyping()
-      global.dankChannel.send("pls hunt")
+      const dankChannel = client.channels.cache.get(channelid);
+      dankChannel.startTyping()
+      dankChannel.send("pls hunt")
       console.log(">".green + " sent" + " pls hunt".red)
-      global.dankChannel.stopTyping();
+      dankChannel.stopTyping();
     } else {
       console.log('>'.green + " Resting...".red)
       console.log(global.datetime.tz(timeZone).format('DD/MM # hh:mm A').green)
@@ -137,10 +143,11 @@ setTimeout(function () {
 */
   setInterval(() => {
     if (global.now >= beginTime && global.now <= ceaseTime) {
-      global.dankChannel.startTyping()
-      global.dankChannel.send("pls dig");
+      const dankChannel = client.channels.cache.get(channelid);
+      dankChannel.startTyping()
+      dankChannel.send("pls dig");
       console.log(">".green + " sent" + " pls dig".red)
-      global.dankChannel.stopTyping();
+      dankChannel.stopTyping();
     } else {
       console.log('>'.green + " Resting...".red)
       console.log(global.datetime.tz(timeZone).format('DD/MM # hh:mm A').green)
@@ -151,10 +158,11 @@ setTimeout(function () {
 */
   setInterval(() => {
     if (global.now >= beginTime && global.now <= ceaseTime) {
-      global.dankChannel.startTyping()
-      global.dankChannel.send("pls fish")
+      const dankChannel = client.channels.cache.get(channelid);
+      dankChannel.startTyping()
+      dankChannel.send("pls fish")
       console.log(">".green + " sent" + " pls fish".red)
-      global.dankChannel.stopTyping();
+      dankChannel.stopTyping();
     } else {
       console.log('>'.green + " Resting...".red)
       console.log(global.datetime.tz(timeZone).format('DD/MM # hh:mm A').green)
@@ -165,10 +173,11 @@ setTimeout(function () {
 */
   setInterval(() => {
     if (global.now >= beginTime && global.now <= ceaseTime) {
-      global.dankChannel.startTyping()
-      global.dankChannel.send("pls beg")
+      const dankChannel = client.channels.cache.get(channelid);
+      dankChannel.startTyping()
+      dankChannel.send("pls beg")
       console.log(">".green + " sent" + " pls beg".red)
-      global.dankChannel.stopTyping();
+      dankChannel.stopTyping();
     } else {
       console.log('>'.green + " Resting...".red)
       console.log(global.datetime.tz(timeZone).format('DD/MM # hh:mm A').green)
@@ -180,25 +189,26 @@ setTimeout(function () {
   ///////////////////
   
   schedule.scheduleJob('5 0 * * *', () => {
-    global.dankChannel.startTyping()
-    global.dankChannel.send("pls daily")
+    const dankChannel = client.channels.cache.get(channelid);
+    dankChannel.startTyping()
+    dankChannel.send("pls daily")
     console.log(">".green + " sent" + " pls daily".red)
-    global.dankChannel.stopTyping();
+    dankChannel.stopTyping();
   });
 
   /*setInterval(() => { 
    if (global.now >= beginTime && global.now <= ceaseTime) {
-  const global.dankChannel = client.channels.cache.get(channelid)
-     global.dankChannel.startTyping()
-       global.dankChannel.send('pls with all')
+  const dankChannel = client.channels.cache.get(channelid)
+     dankChannel.startTyping()
+       dankChannel.send('pls with all')
        console.log(">".green + " sent"+" pls with all".red)
      setTimeout(function(){
-       global.dankChannel.send("pls trade 99999 <@" +storageac+ ">")
+       dankChannel.send("pls trade 99999 <@" +storageac+ ">")
        client.users.fetch(storageac).then((user) => {
        console.log(">".green + ` transferred` + ` 99,999 DC`.red + ` to ` + `${user.tag}`.underline.red)
        })
      }, 3000)
-     global.dankChannel.stopTyping();
+     dankChannel.stopTyping();
    }else{
      console.log('>'.green + " Resting...".red)
      console.log(global.datetime.tz(timeZone).format('DD/MM # hh:mm A').green)
@@ -213,7 +223,7 @@ setTimeout(function () {
     console.log('Auto Sell Running !'.magenta)
     schedule.scheduleJob('0 */3 * * *', () => {
       if (global.now >= beginTime && global.now <= ceaseTime) {
-
+        const dankChannel = client.channels.cache.get(channelid);
         const array = [
           "aplus",
           "ant",
@@ -255,14 +265,14 @@ setTimeout(function () {
         let index = 0;
 
         function showNext() {
-          global.dankChannel.send(`pls sell ${array[index++]} all`);
+          dankChannel.send(`pls sell ${array[index++]} all`);
           if (index < array.length) {
             setTimeout(showNext, 6000);
           }
         }
         showNext();
 
-        global.dankChannel.stopTyping();
+        dankChannel.stopTyping();
         console.log('Sold all the Sellable items'.red)
       } else {
         console.log('>'.green + " Resting...".red)
