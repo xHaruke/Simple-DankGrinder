@@ -231,7 +231,7 @@ setTimeout(function () {
 
   ////////////////////
   //// Auto Sell ////
-  ////////////////////
+  //////////////////
 
   if (process.env.autoSell === "true") {
     console.log("Auto Sell Running !".magenta);
