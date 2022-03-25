@@ -22,7 +22,7 @@ client.on("ready", () => {
 
 var channelid = process.env.channelID;
 var storageac = process.env.storageAccount;
-var timeZone = timeZone;
+var timeZone = process.env.timezone;
 
 var begin = moment.tz(process.env.startTime, "H", timeZone);
 var beginTime = begin.tz("Europe/London").format("H");
