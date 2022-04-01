@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 const express = require("express");
 const app = express();
 
@@ -32,13 +34,11 @@ var ceaseTime = end.tz("Europe/London").format("H");
 
 if (parseInt(process.env.endTime) > 24) {
   console.log("You cannot put a value above 24 in endTime !".red);
-  // @ts-ignore
   return;
 }
 
 if (parseInt(process.env.startTime) > 24) {
   console.log("You cannot put a value above 24 in startTime !".red);
-  // @ts-ignore
   return;
 }
 
@@ -47,7 +47,6 @@ if (parseInt(process.env.startTime) >= parseInt(process.env.endTime)) {
     `Invald Format !!!\nEnd Time should be greater than start time !!`.red
       .underline.bold
   );
-  // @ts-ignore
   return;
 }
 
