@@ -24,12 +24,11 @@ client.on("ready", () => {
 
 var channelid = process.env.channelID;
 var storageac = process.env.storageAccount;
-var timeZone = process.env.timezone;
 
-var begin = moment.tz(process.env.startTime, "H", timeZone);
+var begin = moment.tz(process.env.startTime, "H", process.env.timezone);
 var beginTime = begin.tz("Europe/London").format("H");
 
-var end = moment.tz(process.env.endTime, "H", timeZone);
+var end = moment.tz(process.env.endTime, "H", process.env.timezone);
 var ceaseTime = end.tz("Europe/London").format("H");
 
 if (parseInt(process.env.endTime) > 24) {
@@ -133,7 +132,9 @@ setTimeout(function () {
       console.log(">".green + " sent" + " pls dep all".red);
     } else {
       console.log(">".green + " Resting...".red);
-      console.log(global.datetime.tz(timeZone).format("DD/MM # hh:mm A").green);
+      console.log(
+        global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A").green
+      );
     }
   }, 60000);
   /*
@@ -148,7 +149,9 @@ setTimeout(function () {
       dankChannel.stopTyping();
     } else {
       console.log(">".green + " Resting...".red);
-      console.log(global.datetime.tz(timeZone).format("DD/MM # hh:mm A").green);
+      console.log(
+        global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A").green
+      );
     }
   }, 41000);
   /*
@@ -163,7 +166,9 @@ setTimeout(function () {
       dankChannel.stopTyping();
     } else {
       console.log(">".green + " Resting...".red);
-      console.log(global.datetime.tz(timeZone).format("DD/MM # hh:mm A").green);
+      console.log(
+        global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A").green
+      );
     }
   }, 42000);
   /*
@@ -178,7 +183,9 @@ setTimeout(function () {
       dankChannel.stopTyping();
     } else {
       console.log(">".green + " Resting...".red);
-      console.log(global.datetime.tz(timeZone).format("DD/MM # hh:mm A").green);
+      console.log(
+        global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A").green
+      );
     }
   }, 43000);
   /*
@@ -193,7 +200,9 @@ setTimeout(function () {
       dankChannel.stopTyping();
     } else {
       console.log(">".green + " Resting...".red);
-      console.log(global.datetime.tz(timeZone).format("DD/MM # hh:mm A").green);
+      console.log(
+        global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A").green
+      );
     }
   }, 46000);
 
@@ -224,7 +233,7 @@ setTimeout(function () {
      dankChannel.stopTyping();
    }else{
      console.log('>'.green + " Resting...".red)
-     console.log(global.datetime.tz(timeZone).format('DD/MM # hh:mm A').green)
+     console.log(global.datetime.tz(process.env.timezone).format('DD/MM # hh:mm A').green)
      }
   }, 200000);*/
 
@@ -291,7 +300,8 @@ setTimeout(function () {
       } else {
         console.log(">".green + " Resting...".red);
         console.log(
-          global.datetime.tz(timeZone).format("DD/MM # hh:mm A").green
+          global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A")
+            .green
         );
       }
     });
