@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 const express = require("express");
 const app = express();
 
@@ -26,10 +24,10 @@ var channelid = process.env.channelID;
 var storageac = process.env.storageAccount;
 
 var begin = moment.tz(process.env.startTime, "H", process.env.timezone);
-var beginTime = begin.tz("Europe/London").format("H");
+var beginTime = begin.utc().format("H");
 
 var end = moment.tz(process.env.endTime, "H", process.env.timezone);
-var ceaseTime = end.tz("Europe/London").format("H");
+var ceaseTime = end.utc().format("H");
 
 if (parseInt(process.env.endTime) > 24) {
   console.log("You cannot put a value above 24 in endTime !".red);
@@ -115,7 +113,7 @@ if (process.env.autoBuy === "true") {
 
 setInterval(() => {
   global.now;
-  global.now = new Date().getHours();
+  global.now = new Date().getUTCHours();
   global.datetime = moment(new Date());
 }, 5000);
 
