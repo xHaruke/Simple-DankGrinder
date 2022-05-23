@@ -96,7 +96,7 @@ How to set on repl?
   
   - `autoSell` : Whether you want to auto sell your items or not ! You can only put 'true' or 'false'; e.g. true
 
-  - `autoBuy` : Whether you want to auto buy tools or not ! You can put put 'true' or 'false'; e.g. true
+  - `autoBuy` : Whether you want to auto buy tools or not ! You can only put 'true' or 'false'; e.g. true
 
 - In the end it should look something like this :                                   
 ![env](https://i.imgur.com/iHe0EXC.png) 
