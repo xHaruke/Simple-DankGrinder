@@ -71,7 +71,7 @@ How to set on repl?
 
 ![secrets](https://i.imgur.com/ObcCfIp.png)
 
-- Enter the follow values :
+- Enter the following values :
   - `token`
   - `timezone`
   - `channelID`
