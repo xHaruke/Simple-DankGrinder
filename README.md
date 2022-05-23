@@ -90,9 +90,9 @@ How to set on repl?
 
   - `storageAccount` : ID of account to which you want to send your dank coins ; Put selfbot's id if you dont want to transfer !
   
-  - `startTime` : Time when the bot will start running ; Use 24 hr format and put only the hour value ; e.g. 7 ; Keep the difference between startTime and endTime to 12 hrs or the bot may get banned !!
+  - `startTime` : Time when the bot will start running ; Use 24 hr format and put only the hour value ; e.g. 7 ; Keep the difference between startTime and endTime to less than 12 hrs or the bot may get banned !!
   
-  - `endTime` : Time when the bot will stop running ; Use 24 hr format and put only the hour value ; e.g. 19 ; Keep the difference between startTime and endTime to 12 hrs or the bot may get banned !!
+  - `endTime` : Time when the bot will stop running ; Use 24 hr format and put only the hour value ; e.g. 19 ; Keep the difference between startTime and endTime to less than 12 hrs or the bot may get banned !!
   
   - `autoSell` : Whether you want to auto sell your items or not ! You can only put 'true' or 'false'; e.g. true
 
