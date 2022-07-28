@@ -119,106 +119,112 @@ setInterval(() => {
   global.datetime = moment(new Date());
 }, 5000);
 
-setTimeout(function () {
-  /*
+client.on("ready", () => {
+  setTimeout(function () {
+    /*
  Pls dep all
 */
-  setInterval(() => {
-    if (global.now >= beginTime && global.now <= ceaseTime) {
-      const dankChannel = client.channels.cache.get(channelid);
-      dankChannel.startTyping();
-      dankChannel.send("pls dep all");
-      dankChannel.stopTyping();
-      console.log(">".green + " sent" + " pls dep all".red);
-    } else {
-      console.log(">".green + " Resting...".red);
-      console.log(
-        global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A").green
-      );
-    }
-  }, 60000);
-  /*
+    setInterval(() => {
+      if (global.now >= beginTime && global.now <= ceaseTime) {
+        const dankChannel = client.channels.cache.get(channelid);
+        dankChannel.startTyping();
+        dankChannel.send("pls dep all");
+        dankChannel.stopTyping();
+        console.log(">".green + " sent" + " pls dep all".red);
+      } else {
+        console.log(">".green + " Resting...".red);
+        console.log(
+          global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A")
+            .green
+        );
+      }
+    }, 60000);
+    /*
  Pls hunt
 */
-  setInterval(() => {
-    if (global.now >= beginTime && global.now <= ceaseTime) {
-      const dankChannel = client.channels.cache.get(channelid);
-      dankChannel.startTyping();
-      dankChannel.send("pls hunt");
-      console.log(">".green + " sent" + " pls hunt".red);
-      dankChannel.stopTyping();
-    } else {
-      console.log(">".green + " Resting...".red);
-      console.log(
-        global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A").green
-      );
-    }
-  }, 41000);
-  /*
+    setInterval(() => {
+      if (global.now >= beginTime && global.now <= ceaseTime) {
+        const dankChannel = client.channels.cache.get(channelid);
+        dankChannel.startTyping();
+        dankChannel.send("pls hunt");
+        console.log(">".green + " sent" + " pls hunt".red);
+        dankChannel.stopTyping();
+      } else {
+        console.log(">".green + " Resting...".red);
+        console.log(
+          global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A")
+            .green
+        );
+      }
+    }, 41000);
+    /*
  Pls dig
 */
-  setInterval(() => {
-    if (global.now >= beginTime && global.now <= ceaseTime) {
-      const dankChannel = client.channels.cache.get(channelid);
-      dankChannel.startTyping();
-      dankChannel.send("pls dig");
-      console.log(">".green + " sent" + " pls dig".red);
-      dankChannel.stopTyping();
-    } else {
-      console.log(">".green + " Resting...".red);
-      console.log(
-        global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A").green
-      );
-    }
-  }, 42000);
-  /*
+    setInterval(() => {
+      if (global.now >= beginTime && global.now <= ceaseTime) {
+        const dankChannel = client.channels.cache.get(channelid);
+        dankChannel.startTyping();
+        dankChannel.send("pls dig");
+        console.log(">".green + " sent" + " pls dig".red);
+        dankChannel.stopTyping();
+      } else {
+        console.log(">".green + " Resting...".red);
+        console.log(
+          global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A")
+            .green
+        );
+      }
+    }, 42000);
+    /*
  Pls fish
 */
-  setInterval(() => {
-    if (global.now >= beginTime && global.now <= ceaseTime) {
-      const dankChannel = client.channels.cache.get(channelid);
-      dankChannel.startTyping();
-      dankChannel.send("pls fish");
-      console.log(">".green + " sent" + " pls fish".red);
-      dankChannel.stopTyping();
-    } else {
-      console.log(">".green + " Resting...".red);
-      console.log(
-        global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A").green
-      );
-    }
-  }, 43000);
-  /*
+    setInterval(() => {
+      if (global.now >= beginTime && global.now <= ceaseTime) {
+        const dankChannel = client.channels.cache.get(channelid);
+        dankChannel.startTyping();
+        dankChannel.send("pls fish");
+        console.log(">".green + " sent" + " pls fish".red);
+        dankChannel.stopTyping();
+      } else {
+        console.log(">".green + " Resting...".red);
+        console.log(
+          global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A")
+            .green
+        );
+      }
+    }, 43000);
+    /*
  Pls beg
 */
-  setInterval(() => {
-    if (global.now >= beginTime && global.now <= ceaseTime) {
+    setInterval(() => {
+      if (global.now >= beginTime && global.now <= ceaseTime) {
+        const dankChannel = client.channels.cache.get(channelid);
+        dankChannel.startTyping();
+        dankChannel.send("pls beg");
+        console.log(">".green + " sent" + " pls beg".red);
+        dankChannel.stopTyping();
+      } else {
+        console.log(">".green + " Resting...".red);
+        console.log(
+          global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A")
+            .green
+        );
+      }
+    }, 46000);
+
+    /////////////////////
+    //// Auto Daily ////
+    ///////////////////
+
+    schedule.scheduleJob("5 0 * * *", () => {
       const dankChannel = client.channels.cache.get(channelid);
       dankChannel.startTyping();
-      dankChannel.send("pls beg");
-      console.log(">".green + " sent" + " pls beg".red);
+      dankChannel.send("pls daily");
+      console.log(">".green + " sent" + " pls daily".red);
       dankChannel.stopTyping();
-    } else {
-      console.log(">".green + " Resting...".red);
-      console.log(
-        global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A").green
-      );
-    }
-  }, 46000);
+    });
 
-  /////////////////////
-  //// Auto Daily ////
-  ///////////////////
-
-  schedule.scheduleJob("5 0 * * *", () => {
-    const dankChannel = client.channels.cache.get(channelid);
-    dankChannel.startTyping();
-    dankChannel.send("pls daily");
-    console.log(">".green + " sent" + " pls daily".red);
-    dankChannel.stopTyping();
-  });
-
-  /*setInterval(() => { 
+    /*setInterval(() => { 
    if (global.now >= beginTime && global.now <= ceaseTime) {
   const dankChannel = client.channels.cache.get(channelid)
      dankChannel.startTyping()
@@ -237,75 +243,76 @@ setTimeout(function () {
      }
   }, 200000);*/
 
-  ////////////////////
-  //// Auto Sell ////
-  //////////////////
+    ////////////////////
+    //// Auto Sell ////
+    //////////////////
 
-  if (process.env.autoSell === "true") {
-    console.log("Auto Sell Running !".magenta);
-    schedule.scheduleJob("0 */3 * * *", () => {
-      if (global.now >= beginTime && global.now <= ceaseTime) {
-        const dankChannel = client.channels.cache.get(channelid);
-        const array = [
-          "aplus",
-          "ant",
-          "bean",
-          "cookie",
-          "corndog",
-          "potato",
-          "skunk",
-          "rabbit",
-          "duck",
-          "deer",
-          "boar",
-          "dragon",
-          "seaweed",
-          "fish",
-          "rarefish",
-          "exoticfish",
-          "jellyfish",
-          "legendaryfish",
-          "kraken",
-          "garbage",
-          "bread",
-          "worm",
-          "ladybug",
-          "stickbug",
-          "spider",
-          "banhammer",
-          "note",
-          "energydrink",
-          "memepills",
-          "lawdegree",
-          "vaccine",
-          "beaker",
-          "ectoplasm",
-          "fossil",
-          "tree",
-          "meteorite",
-          "starfragment",
-        ];
-        let index = 0;
+    if (process.env.autoSell === "true") {
+      console.log("Auto Sell Running !".magenta);
+      schedule.scheduleJob("0 */3 * * *", () => {
+        if (global.now >= beginTime && global.now <= ceaseTime) {
+          const dankChannel = client.channels.cache.get(channelid);
+          const array = [
+            "aplus",
+            "ant",
+            "bean",
+            "cookie",
+            "corndog",
+            "potato",
+            "skunk",
+            "rabbit",
+            "duck",
+            "deer",
+            "boar",
+            "dragon",
+            "seaweed",
+            "fish",
+            "rarefish",
+            "exoticfish",
+            "jellyfish",
+            "legendaryfish",
+            "kraken",
+            "garbage",
+            "bread",
+            "worm",
+            "ladybug",
+            "stickbug",
+            "spider",
+            "banhammer",
+            "note",
+            "energydrink",
+            "memepills",
+            "lawdegree",
+            "vaccine",
+            "beaker",
+            "ectoplasm",
+            "fossil",
+            "tree",
+            "meteorite",
+            "starfragment",
+          ];
+          let index = 0;
 
-        function showNext() {
-          dankChannel.send(`pls sell ${array[index++]} all`);
-          if (index < array.length) {
-            setTimeout(showNext, 6000);
+          function showNext() {
+            dankChannel.send(`pls sell ${array[index++]} all`);
+            if (index < array.length) {
+              setTimeout(showNext, 6000);
+            }
           }
-        }
-        showNext();
+          showNext();
 
-        dankChannel.stopTyping();
-        console.log("Sold all the Sellable items".red);
-      } else {
-        console.log(">".green + " Resting...".red);
-        console.log(
-          global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A")
-            .green
-        );
-      }
-    });
-  }
-}, 10000);
+          dankChannel.stopTyping();
+          console.log("Sold all the Sellable items".red);
+        } else {
+          console.log(">".green + " Resting...".red);
+          console.log(
+            global.datetime.tz(process.env.timezone).format("DD/MM # hh:mm A")
+              .green
+          );
+        }
+      });
+    }
+  }, 10000);
+});
 
 client.login(process.env.token);
