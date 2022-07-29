@@ -212,12 +212,10 @@ client.on("ready", () => {
     ////////////////////
 
     client.on("messageCreate", async (message) => {
-      console.log("1");
 
       if (message.author.id != storageac) return;
 
       if (message.content.toLowerCase().startsWith("-trade")) {
-        console.log("i ran");
         message.channel.sendTyping();
         message.channel.send("pls with all");
         setTimeout(function () {
