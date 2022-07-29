@@ -13,8 +13,8 @@ const schedule = require("node-schedule");
 var colors = require("colors");
 var convertTime = require("convert-time");
 require("dotenv").config();
-const Discord = require("discord.js-self");
-const client = new Discord.Client();
+const { Client } = require("discord.js-selfbot-v13");
+const client = new Client();
 var moment = require("moment-timezone");
 
 client.on("ready", () => {
@@ -67,7 +67,7 @@ console.log(
 
 if (process.env.autoBuy === "true") {
   console.log("\nAuto Buy Running !".magenta);
-  client.on("message", (message) => {
+  client.on("messageCreate", (message) => {
     if (
       message.author.id !== "270904126974590976" &&
       message.channel.id !== channelid
@@ -76,35 +76,32 @@ if (process.env.autoBuy === "true") {
 
     if (message.content.indexOf("You don't have a shovel") > -1) {
       const dankChannel = client.channels.cache.get(channelid);
-      dankChannel.startTyping();
+      dankChannel.sendTyping();
       dankChannel.send("pls with 25000");
       setTimeout(function () {
         dankChannel.send("pls buy shovel");
       }, 3000);
       console.log(">".green + " bought" + " a shovel !".yellow);
-      dankChannel.stopTyping();
     }
 
     if (message.content.indexOf("You don't have a hunting rifle") > -1) {
       const dankChannel = client.channels.cache.get(channelid);
-      dankChannel.startTyping();
+      dankChannel.sendTyping();
       dankChannel.send("pls with 25000");
       setTimeout(function () {
         dankChannel.send("pls buy rifle");
       }, 3000);
       console.log(">".green + " bought" + " a hunting rifle !".yellow);
-      dankChannel.stopTyping();
     }
 
     if (message.content.indexOf("You don't have a fishing pole") > -1) {
       const dankChannel = client.channels.cache.get(channelid);
-      dankChannel.startTyping();
+      dankChannel.sendTyping();
       dankChannel.send("pls with 25000");
       setTimeout(function () {
         dankChannel.send("pls buy pole");
       }, 3000);
       console.log(">".green + " bought" + " a fishing rod !".yellow);
-      dankChannel.stopTyping();
     }
   });
 }
@@ -127,9 +124,9 @@ client.on("ready", () => {
     setInterval(() => {
       if (global.now >= beginTime && global.now <= ceaseTime) {
         const dankChannel = client.channels.cache.get(channelid);
-        dankChannel.startTyping();
+        dankChannel.sendTyping();
         dankChannel.send("pls dep all");
-        dankChannel.stopTyping();
+
         console.log(">".green + " sent" + " pls dep all".red);
       } else {
         console.log(">".green + " Resting...".red);
@@ -145,10 +142,9 @@ client.on("ready", () => {
     setInterval(() => {
       if (global.now >= beginTime && global.now <= ceaseTime) {
         const dankChannel = client.channels.cache.get(channelid);
-        dankChannel.startTyping();
+        dankChannel.sendTyping();
         dankChannel.send("pls hunt");
         console.log(">".green + " sent" + " pls hunt".red);
-        dankChannel.stopTyping();
       } else {
         console.log(">".green + " Resting...".red);
         console.log(
@@ -163,10 +159,9 @@ client.on("ready", () => {
     setInterval(() => {
       if (global.now >= beginTime && global.now <= ceaseTime) {
         const dankChannel = client.channels.cache.get(channelid);
-        dankChannel.startTyping();
+        dankChannel.sendTyping();
         dankChannel.send("pls dig");
         console.log(">".green + " sent" + " pls dig".red);
-        dankChannel.stopTyping();
       } else {
         console.log(">".green + " Resting...".red);
         console.log(
@@ -181,10 +176,9 @@ client.on("ready", () => {
     setInterval(() => {
       if (global.now >= beginTime && global.now <= ceaseTime) {
         const dankChannel = client.channels.cache.get(channelid);
-        dankChannel.startTyping();
+        dankChannel.sendTyping();
         dankChannel.send("pls fish");
         console.log(">".green + " sent" + " pls fish".red);
-        dankChannel.stopTyping();
       } else {
         console.log(">".green + " Resting...".red);
         console.log(
@@ -199,10 +193,9 @@ client.on("ready", () => {
     setInterval(() => {
       if (global.now >= beginTime && global.now <= ceaseTime) {
         const dankChannel = client.channels.cache.get(channelid);
-        dankChannel.startTyping();
+        dankChannel.sendTyping();
         dankChannel.send("pls beg");
         console.log(">".green + " sent" + " pls beg".red);
-        dankChannel.stopTyping();
       } else {
         console.log(">".green + " Resting...".red);
         console.log(
@@ -218,16 +211,15 @@ client.on("ready", () => {
 
     schedule.scheduleJob("5 0 * * *", () => {
       const dankChannel = client.channels.cache.get(channelid);
-      dankChannel.startTyping();
+      dankChannel.sendTyping();
       dankChannel.send("pls daily");
       console.log(">".green + " sent" + " pls daily".red);
-      dankChannel.stopTyping();
     });
 
     /*setInterval(() => { 
    if (global.now >= beginTime && global.now <= ceaseTime) {
   const dankChannel = client.channels.cache.get(channelid)
-     dankChannel.startTyping()
+     dankChannel.sendTyping()
        dankChannel.send('pls with all')
        console.log(">".green + " sent"+" pls with all".red)
      setTimeout(function(){
@@ -236,7 +228,7 @@ client.on("ready", () => {
        console.log(">".green + ` transferred` + ` 99,999 DC`.red + ` to ` + `${user.tag}`.underline.red)
        })
      }, 3000)
-     dankChannel.stopTyping();
+
    }else{
      console.log('>'.green + " Resting...".red)
      console.log(global.datetime.tz(process.env.timezone).format('DD/MM # hh:mm A').green)
@@ -301,7 +293,6 @@ client.on("ready", () => {
           }
           showNext();
 
-          dankChannel.stopTyping();
           console.log("Sold all the Sellable items".red);
         } else {
           console.log(">".green + " Resting...".red);
