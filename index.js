@@ -74,6 +74,8 @@ if (process.env.autoBuy === "true") {
     )
       return;
 
+    if (!message.mentions.has(client.user.id)) return;
+
     if (message.content.indexOf("You don't have a shovel") > -1) {
       const dankChannel = client.channels.cache.get(channelid);
       dankChannel.sendTyping();
@@ -205,6 +207,69 @@ client.on("ready", () => {
       }
     }, 46000);
 
+    //////////////////////
+    /// Auto Transfer ///
+    ////////////////////
+
+    client.on("messageCreate", async (message) => {
+      console.log("1");
+
+      if (message.author.id != storageac) return;
+
+      if (message.content.toLowerCase().startsWith("-trade")) {
+        console.log("i ran");
+        message.channel.sendTyping();
+        message.channel.send("pls with all");
+        setTimeout(function () {
+          message.channel.sendTyping();
+          message.channel.send("pls taxcalc all");
+        }, 1000);
+
+        setTimeout(function () {
+          message.channel.messages.fetch({ limit: 1 }).then((messages) => {
+            let lastMessage = messages.first();
+
+            if (lastMessage.author.id != "270904126974590976") return;
+            if (!lastMessage.embeds[0]) return;
+
+            let lastMsgContent = lastMessage.embeds[0].description;
+
+            let balance = lastMsgContent.match(
+              /(?<= send \*\*`⏣ )(.*)(?=`\*\*\*)/gm
+            );
+
+            let balanceStr = balance.toString();
+
+            message.channel.send(
+              "pls trade " + balanceStr + ` <@${storageac}>`
+            );
+          });
+
+          setTimeout(function () {
+            message.channel.messages.fetch({ limit: 1 }).then((messages) => {
+              let lastMessage = messages.first();
+
+              if (lastMessage.author.id != "270904126974590976") return;
+              if (!lastMessage.embeds[0]) return;
+
+              if (!lastMessage.embeds[0].title) return;
+
+              if (!lastMessage.mentions.has(client.user.id)) return;
+
+              if (
+                lastMessage.embeds[0].title.startsWith("Pending Confirmation")
+              ) {
+                let custom_id =
+                  lastMessage.components[0].components[1].customId;
+
+                lastMessage.clickButton(custom_id);
+              }
+            }, 1000);
+          }, 2000);
+        }, 2000);
+      }
+    });
+
     /////////////////////
     //// Auto Daily ////
     ///////////////////
@@ -240,60 +305,36 @@ client.on("ready", () => {
     //////////////////
 
     if (process.env.autoSell === "true") {
-      console.log("Auto Sell Running !".magenta);
+      console.log("\nAuto Sell Running !".magenta);
+      client.on("messageCreate", async (message) => {
+        if (
+          message.author.id !== "270904126974590976" &&
+          message.channel.id !== channelid
+        )
+          return;
+
+        if (!message.embeds[0].title) return;
+
+        if (!message.mentions.has(client.user.id)) return;
+
+        if (
+          message.embeds[0].title.startsWith("Pending Confirmation") &&
+          message.embeds[0].description.startsWith(
+            "Would you like to sell all your"
+          )
+        ) {
+          let custom_id = message.components[0].components[1].customId;
+
+          await message.clickButton(custom_id);
+          console.log("Sold all the Sellable items".red);
+        }
+      });
       schedule.scheduleJob("0 */3 * * *", () => {
         if (global.now >= beginTime && global.now <= ceaseTime) {
           const dankChannel = client.channels.cache.get(channelid);
-          const array = [
-            "aplus",
-            "ant",
-            "bean",
-            "cookie",
-            "corndog",
-            "potato",
-            "skunk",
-            "rabbit",
-            "duck",
-            "deer",
-            "boar",
-            "dragon",
-            "seaweed",
-            "fish",
-            "rarefish",
-            "exoticfish",
-            "jellyfish",
-            "legendaryfish",
-            "kraken",
-            "garbage",
-            "bread",
-            "worm",
-            "ladybug",
-            "stickbug",
-            "spider",
-            "banhammer",
-            "note",
-            "energydrink",
-            "memepills",
-            "lawdegree",
-            "vaccine",
-            "beaker",
-            "ectoplasm",
-            "fossil",
-            "tree",
-            "meteorite",
-            "starfragment",
-          ];
-          let index = 0;
 
-          function showNext() {
-            dankChannel.send(`pls sell ${array[index++]} all`);
-            if (index < array.length) {
-              setTimeout(showNext, 6000);
-            }
-          }
-          showNext();
-
-          console.log("Sold all the Sellable items".red);
+          dankChannel.sendTyping();
+          dankChannel.send("pls sell");
         } else {
           console.log(">".green + " Resting...".red);
           console.log(
