@@ -23,7 +23,7 @@ It is a simple Dank Memer Grinder bot which can **bypass Account Bans** but self
 
 ## Heroku ##
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Haruke-Sensei/Simple-DankGrinder)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/xHaruke/Simple-DankGrinder)
 
 How to deploy?
 
@@ -61,7 +61,7 @@ How to deploy?
 
 ## Repl.it
 
-[![Run on Repl.it](https://repl.it/badge/github/SudhanPlayz/Discord-MusicBot)](https://repl.it/github/Haruke-Sensei/Simple-DankGrinder)
+[![Run on Repl.it](https://repl.it/badge/github/SudhanPlayz/Discord-MusicBot)](https://repl.it/github/xHaruke/Simple-DankGrinder)
 
 How to set on repl?
 
