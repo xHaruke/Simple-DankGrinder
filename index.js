@@ -212,7 +212,6 @@ client.on("ready", () => {
     ////////////////////
 
     client.on("messageCreate", async (message) => {
-
       if (message.author.id != storageac) return;
 
       if (message.content.toLowerCase().startsWith("-trade")) {
@@ -278,25 +277,6 @@ client.on("ready", () => {
       dankChannel.send("pls daily");
       console.log(">".green + " sent" + " pls daily".red);
     });
-
-    /*setInterval(() => { 
-   if (global.now >= beginTime && global.now <= ceaseTime) {
-  const dankChannel = client.channels.cache.get(channelid)
-     dankChannel.sendTyping()
-       dankChannel.send('pls with all')
-       console.log(">".green + " sent"+" pls with all".red)
-     setTimeout(function(){
-       dankChannel.send("pls trade 99999 <@" +storageac+ ">")
-       client.users.fetch(storageac).then((user) => {
-       console.log(">".green + ` transferred` + ` 99,999 DC`.red + ` to ` + `${user.tag}`.underline.red)
-       })
-     }, 3000)
-
-   }else{
-     console.log('>'.green + " Resting...".red)
-     console.log(global.datetime.tz(process.env.timezone).format('DD/MM # hh:mm A').green)
-     }
-  }, 200000);*/
 
     ////////////////////
     //// Auto Sell ////
