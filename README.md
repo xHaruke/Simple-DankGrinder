@@ -21,6 +21,12 @@ It is a simple Dank Memer Grinder bot which can **bypass Account Bans** but self
 - Pls beg
 - Pls fish
 
+## Contents :
+- [Setup](#setup)
+  * [Heroku](#heroku)
+  * [Repl.it](#replit)
+  * Auto-Transfer Coins
+
 # Setup
 
 ## Heroku
