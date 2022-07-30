@@ -291,6 +291,8 @@ client.on("ready", () => {
         )
           return;
 
+        if (!message.embeds[0]) return;
+
         if (!message.embeds[0].title) return;
 
         if (!message.mentions.has(client.user.id)) return;
