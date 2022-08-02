@@ -49,12 +49,19 @@ if (parseInt(process.env.startTime) >= parseInt(process.env.endTime)) {
   return;
 }
 
+var begin_m = moment.tz("00", "mm", process.env.timezone);
+var beginTime_m = begin_m.utc().format("mm");
+
+var end_m = moment.tz("00", "mm", process.env.timezone);
+var endTime_m = end_m.utc().format("mm");
+
 console.log(
   "Start Time : ".red +
-    convertTime(`${process.env.startTime}:00`, "hh:XX A".blue)
+    convertTime(`${process.env.startTime}:${beginTime_m}`, "hh:mm A".blue)
 );
 console.log(
-  "End Time : ".red + convertTime(`${process.env.endTime}:00`, "hh:XX A".blue)
+  "End Time : ".red +
+    convertTime(`${process.env.endTime}:${endTime_m}`, "hh:mm A".blue)
 );
 console.log(
   "Runtime : ".red,
