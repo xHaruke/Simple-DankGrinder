@@ -1,3 +1,7 @@
+# DOESN'T WORK ANYMORE 
+
+## TRY [Donkzz](https://github.com/sarimwaniR/Donkzz)
+
 # Simple DankGrinder
 
 It is a simple Dank Memer Grinder bot which can **bypass Account Bans** but self bots are against discord's ToS. So, Use it at your own risk.
